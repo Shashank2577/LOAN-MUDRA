@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Loan Mudra — Website Visual Concept</title>
+  <style>
+    :root {
+      --bg: #f4f8ff;
+      --surface: #ffffff;
+      --ink: #0d1f38;
+      --sub: #5c6b84;
+      --brand: #0f62fe;
+      --brand-2: #18a0fb;
+      --success: #0f9d58;
+      --accent: #ffb703;
+      --border: #d9e3f3;
+      --radius-xl: 18px;
+      --radius-md: 12px;
+      --space: 20px;
+      --shadow: 0 14px 38px rgba(13, 31, 56, .10);
+      --max: 1180px;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Inter, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      color: var(--ink);
+      background: radial-gradient(circle at 10% 0%, #dce9ff 0, transparent 40%), var(--bg);
+    }
+    .wrap { width: min(var(--max), 94vw); margin: 0 auto; }
+    .nav {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 18px 0;
+    }
+    .logo { font-weight: 800; font-size: 22px; color: var(--brand); }
+    .menu a { color: var(--sub); margin-left: 18px; text-decoration: none; font-weight: 600; }
+    .hero {
+      margin: 8px 0 24px;
+      background: linear-gradient(135deg, #0f62fe 0%, #2a7dff 45%, #18a0fb 100%);
+      border-radius: var(--radius-xl);
+      color: #fff;
+      padding: 48px;
+      box-shadow: var(--shadow);
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 28px;
+    }
+    .hero h1 { margin: 0; font-size: clamp(28px, 4vw, 46px); }
+    .hero p { margin-top: 10px; opacity: .94; max-width: 580px; }
+    .cta { margin-top: 22px; display: flex; gap: 10px; }
+    .btn {
+      border: 0; border-radius: 999px; padding: 12px 18px; font-weight: 700; cursor: pointer;
+    }
+    .btn-primary { background: #fff; color: var(--brand); }
+    .btn-secondary { background: rgba(255,255,255,.16); color: #fff; border: 1px solid rgba(255,255,255,.45); }
+    .mini-card {
+      background: rgba(255,255,255,.18);
+      border: 1px solid rgba(255,255,255,.25);
+      border-radius: 14px;
+      padding: 14px;
+      margin-top: 10px;
+    }
+    section { margin: 18px 0; }
+    .title { font-size: 26px; margin: 0 0 10px; }
+    .sub { color: var(--sub); margin: 0; }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 14px; margin-top: 14px; }
+    .feature {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 16px;
+      box-shadow: 0 8px 20px rgba(13, 31, 56, 0.05);
+    }
+    .feature h3 { margin: 2px 0 8px; }
+    .feature p { margin: 0; color: var(--sub); }
+    .icon {
+      width: 34px; height: 34px; border-radius: 10px;
+      display: grid; place-items: center; color: #fff;
+      background: linear-gradient(145deg, var(--brand), var(--brand-2));
+      font-weight: 700;
+    }
+    .compare {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-top: 16px;
+    }
+    .panel {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 16px;
+    }
+    .bank {
+      display: flex; justify-content: space-between; align-items: center;
+      border-bottom: 1px solid var(--border); padding: 10px 0;
+      color: var(--sub);
+    }
+    .bank:last-child { border-bottom: 0; }
+    .chip { font-size: 12px; border-radius: 999px; padding: 5px 10px; font-weight: 700; }
+    .chip.good { background: #e8f8ef; color: var(--success); }
+    .chip.info { background: #e9f0ff; color: var(--brand); }
+    .design-system {
+      display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 12px; margin-top: 14px;
+    }
+    .swatch { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+    .swatch b { display: block; padding: 10px; font-size: 13px; }
+    .tone { height: 54px; }
+    footer {
+      margin: 26px 0 36px;
+      color: var(--sub);
+      text-align: center;
+      font-size: 13px;
+    }
+    @media (max-width: 980px) {
+      .hero { grid-template-columns: 1fr; padding: 26px; }
+      .grid-3, .compare, .design-system { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <nav class="nav">
+      <div class="logo">Loan Mudra</div>
+      <div class="menu">
+        <a href="#">Loans</a>
+        <a href="#">Credit Score</a>
+        <a href="#">EMI Calculator</a>
+        <a href="#">Login</a>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div>
+        <h1>Find the Right Loan, Faster.</h1>
+        <p>A trust-first loan discovery platform that helps users check eligibility, compare lenders, estimate EMI, and submit application intent for quick human follow-up.</p>
+        <div class="cta">
+          <button class="btn btn-primary">Check Credit Score</button>
+          <button class="btn btn-secondary">Explore Loan Options</button>
+        </div>
+      </div>
+      <div>
+        <div class="mini-card">
+          <strong>Instant Steps</strong>
+          <p>1) Login → 2) Score Check → 3) Compare → 4) Apply</p>
+        </div>
+        <div class="mini-card">
+          <strong>Trust Markers</strong>
+          <p>PAN masking, consent capture, indicative rates, secure lead handling</p>
+        </div>
+      </div>
+    </header>
+
+    <section>
+      <h2 class="title">Core Homepage Feature Blocks</h2>
+      <p class="sub">Designed for conversion-first journeys with clarity and low-friction CTA placement.</p>
+      <div class="grid-3">
+        <article class="feature">
+          <div class="icon">CS</div>
+          <h3>Credit Score Check</h3>
+          <p>Guided flow to capture key details and return an indicative score band.</p>
+        </article>
+        <article class="feature">
+          <div class="icon">LC</div>
+          <h3>Lender Comparison</h3>
+          <p>Rate, tenure, and eligibility comparison for informed selection.</p>
+        </article>
+        <article class="feature">
+          <div class="icon">EMI</div>
+          <h3>EMI Planner</h3>
+          <p>Real-time EMI estimate to support loan affordability decisions.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="compare">
+      <div class="panel">
+        <h3>Sample Lender Comparison UI</h3>
+        <div class="bank"><span>ABC Bank</span><span>11.5% - 16.0%</span></div>
+        <div class="bank"><span>XYZ Finance</span><span>12.0% - 17.5%</span></div>
+        <div class="bank"><span>Mudra Partner NBFC</span><span>10.9% - 15.5%</span></div>
+        <div style="margin-top:8px;"><span class="chip info">Indicative rates only</span></div>
+      </div>
+      <div class="panel">
+        <h3>Application Intent Card</h3>
+        <p class="sub">Fields: amount, purpose, employment, income, preferred lender.</p>
+        <div style="margin-top:8px;"><span class="chip good">Lead-ready format</span></div>
+        <ul style="color: var(--sub);">
+          <li>Auto-save draft inputs within session.</li>
+          <li>Consent checkbox before PAN/financial submission.</li>
+          <li>Instant acknowledgment after submit.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="title">Design System Snapshot</h2>
+      <p class="sub">A clean, financial-services design language emphasizing trust, clarity, and conversion.</p>
+      <div class="design-system">
+        <div class="swatch"><div class="tone" style="background:#0f62fe"></div><b>Primary #0F62FE</b></div>
+        <div class="swatch"><div class="tone" style="background:#18a0fb"></div><b>Accent #18A0FB</b></div>
+        <div class="swatch"><div class="tone" style="background:#0f9d58"></div><b>Success #0F9D58</b></div>
+        <div class="swatch"><div class="tone" style="background:#ffb703"></div><b>Warning #FFB703</b></div>
+      </div>
+    </section>
+
+    <footer>
+      Concept Preview • Suitable for client presentation and first design review • 26 Apr 2026
+    </footer>
+  </div>
+</body>
+</html>

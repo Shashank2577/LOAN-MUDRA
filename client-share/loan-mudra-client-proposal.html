@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Loan Mudra — MVP Proposal (Client Share)</title>
+  <style>
+    :root {
+      --bg: #f4f7fb;
+      --surface: #ffffff;
+      --text: #10213a;
+      --muted: #5b6b86;
+      --primary: #0f62fe;
+      --primary-weak: #eaf1ff;
+      --success: #1f8f58;
+      --warning: #b26a00;
+      --border: #d9e2f2;
+      --radius: 14px;
+      --shadow: 0 10px 30px rgba(16, 33, 58, 0.08);
+      --max: 1100px;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Inter, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      color: var(--text);
+      background: linear-gradient(180deg, #eff4ff 0%, var(--bg) 50%, #fff 100%);
+      line-height: 1.5;
+    }
+    .wrap { width: min(var(--max), 92vw); margin: 0 auto; }
+    .hero {
+      padding: 56px 0 24px;
+    }
+    .hero-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 34px;
+    }
+    .badge {
+      display: inline-block;
+      background: var(--primary-weak);
+      color: var(--primary);
+      font-weight: 700;
+      border-radius: 999px;
+      padding: 6px 12px;
+      font-size: 12px;
+      letter-spacing: .3px;
+      text-transform: uppercase;
+    }
+    h1 { margin: 14px 0 8px; font-size: clamp(28px, 3vw, 42px); }
+    h2 { font-size: 24px; margin: 0 0 12px; }
+    h3 { font-size: 18px; margin: 0 0 8px; }
+    p { margin: 0; color: var(--muted); }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 16px;
+      margin: 18px 0 0;
+    }
+    .kpi {
+      grid-column: span 4;
+      background: #f9fbff;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px;
+    }
+    .kpi strong { display: block; font-size: 24px; color: var(--text); }
+    section { padding: 22px 0; }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px;
+      box-shadow: var(--shadow);
+    }
+    .columns {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+    ul { margin: 10px 0 0 18px; color: var(--muted); }
+    li { margin: 6px 0; }
+    .timeline {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+    }
+    .phase {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 14px;
+      background: #fcfdff;
+    }
+    .phase .wk { color: var(--primary); font-weight: 700; font-size: 12px; text-transform: uppercase; }
+    .tag {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 700;
+      border-radius: 999px;
+      padding: 4px 10px;
+      margin-right: 6px;
+    }
+    .tag.ok { background: #e9f8f0; color: var(--success); }
+    .tag.warn { background: #fff2e0; color: var(--warning); }
+    table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+    th, td { border-bottom: 1px solid var(--border); text-align: left; padding: 10px 8px; color: var(--muted); }
+    th { color: var(--text); }
+    .footer {
+      margin: 20px 0 36px;
+      font-size: 13px;
+      color: var(--muted);
+      text-align: center;
+    }
+    @media (max-width: 900px) {
+      .kpi { grid-column: span 12; }
+      .columns { grid-template-columns: 1fr; }
+      .timeline { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="hero">
+      <div class="hero-card">
+        <span class="badge">Client Share • Loan Mudra</span>
+        <h1>Loan Aggregation MVP Proposal</h1>
+        <p>This proposal converts your business requirements into a practical MVP delivery plan focused on high-quality lead generation, customer clarity, and backend operational readiness.</p>
+        <div class="grid">
+          <div class="kpi"><strong>10 Weeks</strong>Estimated MVP timeline</div>
+          <div class="kpi"><strong>3 Core Funnels</strong>Credit check, comparison, application intent</div>
+          <div class="kpi"><strong>Manual Loan Routing</strong>Human-in-the-loop for Phase 1</div>
+        </div>
+      </div>
+    </header>
+
+    <section>
+      <div class="card">
+        <h2>Business Objectives</h2>
+        <div class="columns">
+          <div>
+            <h3>Primary Goals</h3>
+            <ul>
+              <li>Generate qualified loan leads from website traffic.</li>
+              <li>Capture personal + financial profile data required for sales qualification.</li>
+              <li>Help users understand eligibility through indicative credit and loan info.</li>
+              <li>Allow users to express bank/lender preference for follow-up conversion.</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Phase-1 Boundaries</h3>
+            <ul>
+              <li>No direct bank/NBFC disbursal integrations.</li>
+              <li>No automated approval decisions.</li>
+              <li>Static/semi-dynamic lender information acceptable.</li>
+              <li>Manual internal team processing for lead closure.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="card">
+        <h2>Planned MVP Features</h2>
+        <span class="tag ok">Included in MVP</span>
+        <table>
+          <thead>
+            <tr>
+              <th>Module</th>
+              <th>What the client gets</th>
+              <th>Business impact</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>User Authentication</td>
+              <td>Email/password + Google/Microsoft sign-in</td>
+              <td>Higher conversion and trusted data capture</td>
+            </tr>
+            <tr>
+              <td>Credit Score Check</td>
+              <td>CIBIL integration-ready flow (or simulation mode)</td>
+              <td>Top-of-funnel lead capture and segmentation</td>
+            </tr>
+            <tr>
+              <td>Loan Information & Comparison</td>
+              <td>Product pages + lender comparison (rate/tenure/eligibility)</td>
+              <td>Improved decision confidence and intent quality</td>
+            </tr>
+            <tr>
+              <td>Loan Application Intent</td>
+              <td>Structured forms for amount, purpose, income, lender preference</td>
+              <td>Sales-ready leads for conversion team</td>
+            </tr>
+            <tr>
+              <td>EMI Calculator</td>
+              <td>Instant monthly installment estimate</td>
+              <td>Better user trust and qualification intent</td>
+            </tr>
+            <tr>
+              <td>Admin Lead Console</td>
+              <td>Lead list, filters, status updates, action notes</td>
+              <td>Operational visibility and follow-up velocity</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section>
+      <div class="card">
+        <h2>Project Timeline (10 Weeks)</h2>
+        <div class="timeline">
+          <div class="phase">
+            <div class="wk">Weeks 1–3</div>
+            <h3>Foundation</h3>
+            <ul>
+              <li>Auth system and role model</li>
+              <li>Lead schema and secure storage</li>
+              <li>Consent and validation baseline</li>
+            </ul>
+          </div>
+          <div class="phase">
+            <div class="wk">Weeks 4–6</div>
+            <h3>Core User Flows</h3>
+            <ul>
+              <li>Credit check journey</li>
+              <li>Loan comparison module</li>
+              <li>Application intent capture</li>
+            </ul>
+          </div>
+          <div class="phase">
+            <div class="wk">Weeks 7–9</div>
+            <h3>Ops + Hardening</h3>
+            <ul>
+              <li>Admin panel + lead statuses</li>
+              <li>Attribution and campaign support</li>
+              <li>Security + monitoring controls</li>
+            </ul>
+          </div>
+          <div class="phase">
+            <div class="wk">Week 10</div>
+            <h3>UAT & Launch</h3>
+            <ul>
+              <li>Client UAT and fixes</li>
+              <li>Content and compliance finalization</li>
+              <li>Go-live checklist</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="card">
+        <h2>Key Assumptions and Risks</h2>
+        <div class="columns">
+          <div>
+            <h3>Assumptions</h3>
+            <ul>
+              <li>Client provides lender/content data in agreed format.</li>
+              <li>Legal copy for privacy/consent is finalized before launch.</li>
+              <li>Internal team is available for lead operations training.</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Risk Controls</h3>
+            <ul>
+              <li>Sensitive data masking and access controls.</li>
+              <li>Indicative disclaimers for rates, EMI, and eligibility.</li>
+              <li>Manual decisioning to avoid wrong auto-approvals.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <p class="footer">Prepared for client discussion • Version 1.0 • Date: 26 Apr 2026</p>
+  </div>
+</body>
+</html>
