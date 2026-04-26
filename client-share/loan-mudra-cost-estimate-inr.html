@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Loan Mudra — Cost Estimate (INR)</title>
+  <style>
+    :root {
+      --bg: #f6f8fc;
+      --surface: #fff;
+      --text: #0e223f;
+      --muted: #5f6f89;
+      --primary: #165dff;
+      --border: #d8e2f0;
+      --good: #087f5b;
+      --warn: #9f4f00;
+      --max: 980px;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: Inter, Segoe UI, sans-serif; background: var(--bg); color: var(--text); }
+    .wrap { width: min(var(--max), 92vw); margin: 28px auto; }
+    .panel { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 24px; margin-bottom: 16px; }
+    h1 { margin: 0 0 8px; font-size: 32px; }
+    h2 { margin: 0 0 10px; font-size: 22px; }
+    p { margin: 0; color: var(--muted); line-height: 1.6; }
+    .pill { display: inline-block; font-size: 12px; font-weight: 700; border-radius: 99px; padding: 5px 10px; background: #e9f0ff; color: var(--primary); margin-right: 6px; }
+    table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+    th, td { border-bottom: 1px solid var(--border); padding: 10px 8px; text-align: left; }
+    th { font-size: 14px; }
+    td { color: var(--muted); }
+    .num { text-align: right; font-variant-numeric: tabular-nums; }
+    .total { font-weight: 700; color: var(--text); }
+    .grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 12px; margin-top: 14px; }
+    .kpi { border: 1px solid var(--border); border-radius: 10px; padding: 14px; background: #fbfdff; }
+    .kpi strong { display: block; font-size: 24px; }
+    ul { margin: 10px 0 0 18px; color: var(--muted); }
+    .ok { color: var(--good); font-weight: 700; }
+    .warn { color: var(--warn); font-weight: 700; }
+    @media (max-width: 900px) { .grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="panel">
+      <span class="pill">Budget Proposal</span>
+      <span class="pill">INR</span>
+      <h1>Loan Mudra MVP Cost Estimate</h1>
+      <p>This estimate assumes a 3-month execution window with a 3-developer core team, aligned to the approved MVP scope (lead generation platform, not lending disbursal system).</p>
+    </section>
+
+    <section class="panel">
+      <h2>Team & Timeline Assumptions</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Role</th>
+            <th>Count</th>
+            <th>Monthly Cost / Person (INR)</th>
+            <th class="num">Duration</th>
+            <th class="num">Subtotal (INR)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Full-Stack Developer (Senior)</td>
+            <td>1</td>
+            <td>₹2,20,000</td>
+            <td class="num">3 months</td>
+            <td class="num">₹6,60,000</td>
+          </tr>
+          <tr>
+            <td>Full-Stack Developer (Mid)</td>
+            <td>1</td>
+            <td>₹1,60,000</td>
+            <td class="num">3 months</td>
+            <td class="num">₹4,80,000</td>
+          </tr>
+          <tr>
+            <td>Frontend / UI Engineer</td>
+            <td>1</td>
+            <td>₹1,50,000</td>
+            <td class="num">3 months</td>
+            <td class="num">₹4,50,000</td>
+          </tr>
+          <tr>
+            <td colspan="4" class="total">Core Development Cost</td>
+            <td class="num total">₹15,90,000</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="panel">
+      <h2>Additional Project Cost Components</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th>Basis</th>
+            <th class="num">Estimated Cost (INR)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>QA + UAT support</td>
+            <td>Part-time QA effort over 3 months</td>
+            <td class="num">₹1,80,000</td>
+          </tr>
+          <tr>
+            <td>DevOps/Cloud setup</td>
+            <td>CI/CD + staging + production configuration</td>
+            <td class="num">₹1,20,000</td>
+          </tr>
+          <tr>
+            <td>UI/UX design support</td>
+            <td>Design system + responsive screens</td>
+            <td class="num">₹1,40,000</td>
+          </tr>
+          <tr>
+            <td>Project management & BA</td>
+            <td>Sprint planning, review, documentation</td>
+            <td class="num">₹1,50,000</td>
+          </tr>
+          <tr>
+            <td>Compliance/legal content assistance</td>
+            <td>Consent/privacy copy and review</td>
+            <td class="num">₹70,000</td>
+          </tr>
+          <tr>
+            <td colspan="2" class="total">Additional Services Cost</td>
+            <td class="num total">₹6,60,000</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="panel">
+      <h2>Commercial Summary</h2>
+      <div class="grid">
+        <div class="kpi"><strong>₹22,50,000</strong>Total estimated MVP build cost</div>
+        <div class="kpi"><strong>₹2,25,000</strong>Recommended contingency (10%)</div>
+        <div class="kpi"><strong>₹24,75,000</strong>Budget envelope (incl. contingency)</div>
+      </div>
+      <ul>
+        <li><span class="ok">Suggested payment milestones:</span> 30% kickoff, 30% after core flows, 30% UAT-ready build, 10% go-live support.</li>
+        <li><span class="warn">Not included:</span> paid 3rd-party API subscription fees (CIBIL/provider), marketing spend, and long-term support retainer.</li>
+      </ul>
+    </section>
+
+    <section class="panel">
+      <h2>Timeline-to-Cost Mapping</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Month</th>
+            <th>Delivery focus</th>
+            <th class="num">Burn estimate (INR)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Month 1</td>
+            <td>Architecture setup, auth, lead model, consent flows</td>
+            <td class="num">₹7,20,000</td>
+          </tr>
+          <tr>
+            <td>Month 2</td>
+            <td>Credit-check, comparison, application, EMI journeys</td>
+            <td class="num">₹7,50,000</td>
+          </tr>
+          <tr>
+            <td>Month 3</td>
+            <td>Admin console, hardening, UAT, launch support</td>
+            <td class="num">₹7,80,000</td>
+          </tr>
+        </tbody>
+      </table>
+      <p style="margin-top:10px;">Prepared for commercial discussion • Version 1.0 • Date: 26 Apr 2026</p>
+    </section>
+  </div>
+</body>
+</html>
